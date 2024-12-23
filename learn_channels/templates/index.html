@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
+    <title>Test channels</title>
+</head>
+<body>
+    <div hx-ext="ws" ws-connect="/ws/first/">
+        
+        <form id="form" ws-send>
+            <input name="id">
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="text">
+            New message received
+        </div>
+    </div>
+
+</body>
+</html>
